@@ -1,0 +1,46 @@
+@media (min-width: 768px) {
+  nav ul {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .hamburger {
+    display: none;
+  }
+  main {
+    max-width: 1080px;
+    /* display: grid; */
+    margin: 0 auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 2fr)); */
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  .home-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+  .certificate {
+    grid-column: span 2;
+    background: white;
+    padding: 15px;
+  }
+  .country img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .course-work,
+  .country {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+  }
+}
