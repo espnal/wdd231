@@ -70,6 +70,13 @@ h3 {
   text-align: center;
   margin-bottom: 1rem;
 }
+.country {
+  display: flex;
+  flex-direction: column;
+}
+.country img {
+  align-items: center;
+}
 .filter-buttons {
   margin-top: 1rem;
   margin-bottom: 20px;
