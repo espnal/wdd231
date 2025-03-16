@@ -1,0 +1,103 @@
+/* normalize.css - A modern alternative to CSS resets */
+
+/* 1. Ensures consistent box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Removes default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Improves text rendering */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 4. Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 5. Remove list styles on ul, ol */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* 6. Remove default button styles */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* 7. Improve button usability */
+button {
+  cursor: pointer;
+}
+
+/* 8. Remove anchor text decoration */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 9. Ensure tables have proper spacing */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 10. Set a consistent default for form elements */
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+/* 11. Remove focus outlines except for keyboard users */
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 2px solid #007bff;
+}
+
+/* 12. Make sure headings and strong elements stand out */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-weight: bold;
+}

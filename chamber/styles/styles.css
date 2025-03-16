@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Afacad Flux", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+nav ul {
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+}
+nav ul.active {
+  display: flex;
+}
+nav ul li {
+  padding: 0.5rem;
+  list-style-type: none;
+  text-align: center;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+  font-size: small;
+  padding: 0.5rem;
+}
+
+nav ul li a:hover {
+  color: darkslategray;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+h2 {
+  font-size: 35px;
+  text-align: center;
+}
+h3 {
+  background-color: darkslategray;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.header-cont {
+  background-color: darkslategray;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+}
+.header-cont img {
+  width: 100px;
+  margin: 0.5rem;
+}
+.hamburger {
+  margin: 0.5rem;
+  font-size: 40px;
+}
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+}
+.img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.nav-link2 {
+  background-color: darkslategray;
+  color: #fff;
+}
+.nav-link2 li a {
+  font-size: 18px;
+}
+.hero img {
+  width: 100%;
+  border-radius: 8px;
+}
+.directory-main {
+  width: 100%;
+}
+
+#directory-selector {
+  width: 100%;
+  text-align: center;
+}
+
+#directory-selector button {
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  background-color: var(--darker-green);
+  border: 1px black solid;
+}
+
+#directory-selector button.active {
+  background-color: darkslategray;
+  color: #fff;
+}
+
+/* Cards view */
+
+.directory-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-items: center;
+}
+
+.directory-cards section {
+  text-align: center;
+  border: 2px solid grey;
+  width: 300px;
+  background-color: var(--darker-green);
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+/* List View */
+
+.directory-list {
+  display: grid;
+  justify-items: center;
+  padding: 1rem;
+}
+
+.directory-main a {
+  color: lightgrey;
+}
+
+.directory-main a:visited {
+  color: lightgrey;
+}
+
+.directory-list section img {
+  display: none;
+}
+
+.directory-list section {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  width: 70%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.directory-list section:nth-child(odd) {
+  background-color: var(--darker-green);
+}
+
+.directory-list section:nth-child(even) {
+  background-color: var(--dark-green);
+}

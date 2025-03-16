@@ -113,10 +113,10 @@ function filterCourses(filter) {
 
 displayCourses(courses);
 const links = [
-  { text: "Home", href: "#" },
+  { text: "Home", href: "./" },
   { text: "Chamber", href: "#" },
-  { text: "GitHub Profile", href: "#" },
-  { text: "LinkedIn", href: "#" },
+  { text: "GitHub Profile", href: "https://github.com/espnal" },
+  { text: "LinkedIn", href: "https://www.linkedin.com/in/roguin-pena/" },
 ];
 const createNav = (links) => {
   const ul = document.createElement("ul");

@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  nav ul {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .hamburger {
+    display: none;
+  }
+  main {
+    max-width: 1080px;
+    /* display: grid; */
+    margin: 0 auto;
+    /* grid-template-columns: repeat(auto-fit, minmax(150px, 2fr)); */
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  .nav-link2 {
+    display: none !important;
+  }
+  .hero img {
+    width: 100%;
+  }
+}

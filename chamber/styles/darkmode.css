@@ -1,0 +1,92 @@
+/* General Styles */
+
+body.light {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+body.dark {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+/* Hide the checkbox */
+.hidden-checkbox {
+  display: none;
+}
+
+/* Button Styles */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-button {
+  background: rgb(38, 63, 63);
+  border: none;
+  padding: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  transition: background 0.3s, transform 0.5s ease-in-out;
+}
+
+/* Rotation Effect */
+.toggle-button:has(.hidden-checkbox:checked) {
+  transform: rotate(180deg);
+}
+
+.toggle-button:hover {
+  background: rgb(38, 63, 63);
+}
+
+body:has(.hidden-checkbox:checked) .toggle-button {
+  background: rgb(38, 63, 63);
+}
+
+body:has(.hidden-checkbox:checked) .toggle-button:hover {
+  background: rgb(38, 63, 63);
+}
+
+/* Icon Wrapper */
+.icon-wrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+/* Icon Styles */
+.icon {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.moon {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+/* Toggle between sun and moon */
+.hidden-checkbox:checked + .toggle-button .sun {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.hidden-checkbox:checked + .toggle-button .moon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Change Theme */
+body:has(.hidden-checkbox:checked) {
+  background: #111827;
+  color: #f3f4f6;
+}
