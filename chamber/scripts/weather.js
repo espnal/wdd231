@@ -1,6 +1,6 @@
 const LAT = "18.4273";
 const LON = "-68.9729";
-const APIKEY = import.meta.env.VITE_API_KEY;
+const APIKEY = "949e704466b5d382fed0e2156f0641de";
 
 const WEATHER_URL_PROD = `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${APIKEY}&units=metric`;
 const apiURL = WEATHER_URL_PROD;
