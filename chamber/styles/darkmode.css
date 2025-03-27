@@ -90,3 +90,9 @@ body:has(.hidden-checkbox:checked) {
   background: #111827;
   color: #f3f4f6;
 }
+.hidden-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
