@@ -114,7 +114,10 @@ function filterCourses(filter) {
 displayCourses(courses);
 const links = [
   { text: "Home", href: "./" },
-  { text: "Chamber", href: "#" },
+  {
+    text: "Chamber",
+    href: "https://espnal.github.io/wdd231/chamber/index.html",
+  },
   { text: "GitHub Profile", href: "https://github.com/espnal" },
   { text: "LinkedIn", href: "https://www.linkedin.com/in/roguin-pena/" },
 ];

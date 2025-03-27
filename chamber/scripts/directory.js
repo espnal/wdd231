@@ -1,3 +1,4 @@
+const businessDataUrl = "./data/members.json";
 // Toggle active/not active buttons
 
 var gridSelector = document.querySelector("#directory-grid");

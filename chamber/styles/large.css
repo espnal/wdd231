@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 798px) {
   nav ul {
     gap: 2rem;
     display: flex;
@@ -26,4 +26,21 @@
   .hero img {
     width: 100%;
   }
+  .hero-button {
+    position: absolute;
+    left: 70%;
+    top: 70%;
+    font-size: 20px;
+  }
+  .weather-forecast {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .weather-forecast div {
+    min-width: 260px;
+  }
+  /* .weather-forecast div:last-child {
+    grid-column: 3 / 3;
+  } */
 }

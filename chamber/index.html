@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta name="author" content="Roguin Pena Espinal" />
-    <!-- <meta charset="UTF-8" /> -->
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link
@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="styles/darkmode.css" />
     <link rel="stylesheet" href="styles/large.css" />
     <title>Home Timbuktu</title>
+    <script src="./scripts/weather.js" defer></script>
+    <script src="./scripts/forecast.js" defer></script>
     <script src="./scripts/script.js" defer></script>
   </head>
   <body>
@@ -70,12 +72,47 @@
     <main>
       <div class="hero">
         <img src="images/hero.jpg" alt="hero" />
-        <a href="">Keynote Tickets</a>
+        <a class="hero-button" href="">Keynote Tickets</a>
       </div>
       <h2>Home</h2>
-      <section class="events"><h3>Events</h3></section>
-      <section class="current-weather"><h3>Current Weather</h3></section>
-      <section class="weather-forecast"><h3>Weather Forecast</h3></section>
+      <div class="main-section">
+        <section class="events">
+          <h3>Events</h3>
+          <div class="chamber-events">
+            <div id="event1">
+              <h4>New Member Promotion!</h4>
+              <p>
+                Discover exclusive offers for Chamber of Commerce members. Take
+                advantage now!
+              </p>
+              <button id="promotion-btn">View Promotion</button>
+            </div>
+
+            <div id="event2">
+              <h4>New Registrations Open!</h4>
+              <p>
+                We are accepting new company registrations. If you'd like to
+                join our network, sign up now!
+              </p>
+              <button id="registration-btn">Sign Up Now</button>
+            </div>
+          </div>
+        </section>
+        <section class="current-weather">
+          <h3>Current Weather</h3>
+          <div id="icon-wrapper"></div>
+          <div class="desc-wrapper">
+            <span id="temperature"></span>
+            <span id="weatherdesc">?</span>
+            <span id="high"></span>
+            <span id="low"></span>
+            <span id="humidity"></span>
+            <span id="sunrise"></span>
+            <span id="sunset"></span>
+          </div>
+        </section>
+        <section class="weather-forecast"><h3>Weather Forecast</h3></section>
+      </div>
       <section class="business">
         <div class="business-cards"></div>
       </section>
@@ -86,7 +123,17 @@
       <p>Timbuktu, Mail 999</p>
       <p>info@timbuktucc.org</p>
       <p>(223) 555-2300</p>
-      <div class="icons"></div>
+      <div class="icons">
+        <a href="https://www.facebook.com/timbuktucc" target="_blank">
+          <img src="images/youtube.png" alt="youtube" />
+        </a>
+        <a href="https://www.instagram.com/timbuktucc" target="_blank">
+          <img src="images/x.png" alt="x" />
+        </a>
+        <a href="https://www.twitter.com/timbuktucc" target="_blank">
+          <img src="images/linkedin.png" alt="linkedin" />
+        </a>
+      </div>
       <div class="credits">
         <p id="copyr"></p>
         <p id="lastModified"></p>
