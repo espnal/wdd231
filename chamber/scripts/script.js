@@ -40,3 +40,46 @@ document.addEventListener("DOMContentLoaded", () => {
       : "&#9776;";
   });
 });
+const businessDataUrl = "./data/members.json";
+
+async function loadBusinessCards() {
+  try {
+    const response = await fetch(businessDataUrl);
+    if (!response.ok) throw new Error("Failed to fetch business data");
+
+    const data = await response.json();
+
+    if (data.businesses) {
+      displayBusinessCards(data.businesses);
+    } else {
+      console.error("Unexpected JSON structure:", data);
+    }
+  } catch (error) {
+    console.error("Error loading business data:", error);
+  }
+}
+
+function displayBusinessCards(businesses) {
+  const container = document.querySelector(".business-cards");
+  container.innerHTML = "";
+  let count = 0;
+  businesses.forEach((business) => {
+    if (count >= 3) return;
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML = `
+                    <img src="${business.imageURL}" alt="${business.name}">
+                    <h2>${business.name}</h2>
+                    <p>${business.streetAddress}</p>
+                    <p>${business.cityStateZip}</p>
+                    <p><strong>Phone:</strong> ${business.phoneNumber}</p>
+                    <a href="${business.websiteURL}" target="_blank">Visit Website</a>
+                    <p>${business.adcopy}</p>
+                `;
+    container.appendChild(card);
+    count++;
+  });
+}
+
+// Load business cards when the page loads
+loadBusinessCards();

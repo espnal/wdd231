@@ -23,7 +23,6 @@ async function getTheWeather() {
 
     const data = await response.json();
     displayResults(data);
-    console.log(data);
   } catch (error) {
     console.error("Error:", error.message);
     weatherDesc.textContent = "No se pudo cargar el clima.";

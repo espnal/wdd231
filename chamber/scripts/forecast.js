@@ -10,7 +10,6 @@ async function getWeatherForecast() {
 
     const data = await response.json();
     displayForecast(data);
-    console.log(data); // Depuración
   } catch (error) {
     console.error("Error:", error.message);
     forecastContainer.innerHTML = "<p>No se pudo cargar el pronóstico.</p>";
