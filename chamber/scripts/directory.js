@@ -1,4 +1,4 @@
-const businessDataUrl = "./data/members.json";
+const businessDataUrl1 = "./data/members.json";
 // Toggle active/not active buttons
 
 var gridSelector = document.querySelector("#directory-grid");
@@ -48,7 +48,7 @@ const displayBusinesses = (members) => {
 
 async function getBusinessData() {
   try {
-    const response = await fetch(businessDataUrl);
+    const response = await fetch(businessDataUrl1);
     if (response.ok) {
       const data = await response.json();
       displayBusinesses(data.businesses);

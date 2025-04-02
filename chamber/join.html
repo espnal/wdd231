@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="author" content="Roguin Pena Espinal" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link
+      rel="icon"
+      href="images/favicon_io/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/darkmode.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <title>Home Timbuktu</title>
+    <script src="./scripts/weather.js" defer></script>
+    <!-- <script src="./scripts/forecast.js" defer></script> -->
+    <script src="./scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-cont">
+        <div class="img-div">
+          <img src="images/c.png" alt="images" />
+          <div class="title">
+            <h1>Timbuktu</h1>
+            <p>Chamber of Commerce</p>
+          </div>
+        </div>
+        <nav class="nav-link"></nav>
+        <div class="dark-mode">
+          <div class="container">
+            <label for="theme-toggle" class="toggle-button">
+              <input
+                type="checkbox"
+                id="theme-toggle"
+                class="hidden-checkbox"
+                aria-label="Toggle dark mode" />
+              <div class="icon-wrapper">
+                <svg
+                  class="icon sun"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg
+                  class="icon moon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                </svg>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="hamburger">&#9776;</div>
+      </div>
+      <nav class="nav-link2"></nav>
+    </header>
+    <main>
+      <section>
+        <h3>Welcome to the Timbuktu Chamber of Commerce Signup!</h3>
+        <p>Fill in the required information to sign up.</p>
+
+        <form id="membershipForm" action="thankyou.html" method="GET">
+          <fieldset>
+            <legend>Applicant Information</legend>
+
+            <label for="firstName"
+              >First Name:
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                title="Enter your first name"
+                autocomplete="given-name"
+                required />
+            </label>
+
+            <label for="lastName"
+              >Last Name:
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                title="Enter your last name"
+                autocomplete="family-name"
+                required />
+            </label>
+
+            <label for="orgTitle"
+              >Organizational Title:
+              <input
+                type="text"
+                id="orgTitle"
+                name="orgTitle"
+                title="Enter your organizational title"
+                autocomplete="organization-title"
+                pattern="[A-Za-z\-\s]{7,}"
+                required />
+            </label>
+
+            <label for="email"
+              >Email Address:
+              <input
+                type="email"
+                id="email"
+                name="email"
+                title="Enter your email address"
+                autocomplete="email"
+                placeholder="example@domain.com"
+                required />
+            </label>
+
+            <label for="phone"
+              >Mobile Phone:
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                title="Enter your phone number"
+                autocomplete="tel"
+                required />
+            </label>
+
+            <label for="organization"
+              >Business/Organization Name:
+              <input
+                type="text"
+                id="organization"
+                name="organization"
+                title="Enter your business/organization name"
+                autocomplete="organization"
+                required />
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Membership Level</legend>
+            <label for="membership">Select Membership Level:</label>
+            <select id="membership" name="membership" required>
+              <option value="NP">NP Membership (Non-Profit, No Fee)</option>
+              <option value="Bronze">Bronze Membership</option>
+              <option value="Silver">Silver Membership</option>
+              <option value="Gold">Gold Membership</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Business Description</legend>
+            <label for="description"
+              >Description:
+              <textarea
+                id="description"
+                name="description"
+                title="Enter a brief description of your business/organization"
+                required></textarea>
+            </label>
+          </fieldset>
+
+          <input type="hidden" name="timestamp" id="timestamp" value="" />
+
+          <button type="submit">Submit Application</button>
+        </form>
+      </section>
+      <section class="membership-cards">
+        <div class="card" id="np-card">
+          <h3>NP Membership</h3>
+          <p>For non-profit organizations. No fee required.</p>
+          <button onclick="openModal('np-modal')">Learn More</button>
+        </div>
+
+        <div class="card" id="bronze-card">
+          <h3>Bronze Membership</h3>
+          <p>Basic membership with limited benefits.</p>
+          <button onclick="openModal('bronze-modal')">Learn More</button>
+        </div>
+
+        <div class="card" id="silver-card">
+          <h3>Silver Membership</h3>
+          <p>Includes event discounts and promotional support.</p>
+          <button onclick="openModal('silver-modal')">Learn More</button>
+        </div>
+
+        <div class="card" id="gold-card">
+          <h3>Gold Membership</h3>
+          <p>Premium benefits including special events and advertising.</p>
+          <button onclick="openModal('gold-modal')">Learn More</button>
+        </div>
+      </section>
+
+      <div id="np-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('np-modal')">&times;</span>
+          <h2>NP Membership</h2>
+          <p>No fee. Access to networking events.</p>
+        </div>
+      </div>
+
+      <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('bronze-modal')"
+            >&times;</span
+          >
+          <h2>Bronze Membership</h2>
+          <p>Basic benefits including limited promotional opportunities.</p>
+        </div>
+      </div>
+
+      <div id="silver-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('silver-modal')"
+            >&times;</span
+          >
+          <h2>Silver Membership</h2>
+          <p>Includes event discounts and additional promotional support.</p>
+        </div>
+      </div>
+
+      <div id="gold-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('gold-modal')">&times;</span>
+          <h2>Gold Membership</h2>
+          <p>
+            Premium benefits such as advertising, networking, and special event
+            access.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h4>Timbuktu Chamber of Commerce</h4>
+      <p>10 Rue De La Paix</p>
+      <p>Timbuktu, Mail 999</p>
+      <p>info@timbuktucc.org</p>
+      <p>(223) 555-2300</p>
+      <div class="icons">
+        <a href="https://www.facebook.com/timbuktucc" target="_blank">
+          <img src="images/youtube.png" alt="youtube" />
+        </a>
+        <a href="https://www.instagram.com/timbuktucc" target="_blank">
+          <img src="images/x.png" alt="x" />
+        </a>
+        <a href="https://www.twitter.com/timbuktucc" target="_blank">
+          <img src="images/linkedin.png" alt="linkedin" />
+        </a>
+      </div>
+      <div class="credits">
+        <p id="copyr"></p>
+        <p id="lastModified"></p>
+      </div>
+    </footer>
+  </body>
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+  </script>
+</html>

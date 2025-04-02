@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const links = [
   { text: "Home", href: "./" },
   { text: "Directory", href: "./directory.html" },
-  { text: "Join", href: "https://github.com/espnal" },
+  { text: "Join", href: "./join.html" },
   { text: "Discover", href: "https://www.linkedin.com/in/roguin-pena/" },
 ];
 const createNav = (links) => {
@@ -28,18 +28,21 @@ const createNav = (links) => {
 };
 const nav = document.querySelector(".nav-link");
 const nav2 = document.querySelector(".nav-link2");
-nav.appendChild(createNav(links));
-nav2.appendChild(createNav(links));
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".nav-link2 ul");
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    hamburger.innerHTML = navMenu.classList.contains("active")
-      ? "&#10006;"
-      : "&#9776;";
+if (nav && nav2) {
+  nav.appendChild(createNav(links));
+  nav2.appendChild(createNav(links));
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-link2 ul");
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      hamburger.innerHTML = navMenu.classList.contains("active")
+        ? "&#10006;"
+        : "&#9776;";
+    });
   });
-});
+}
 const businessDataUrl = "./data/members.json";
 
 async function loadBusinessCards() {
@@ -61,6 +64,7 @@ async function loadBusinessCards() {
 
 function displayBusinessCards(businesses) {
   const container = document.querySelector(".business-cards");
+  if (!container) return;
   container.innerHTML = "";
   let count = 0;
   businesses.forEach((business) => {
@@ -81,5 +85,4 @@ function displayBusinessCards(businesses) {
   });
 }
 
-// Load business cards when the page loads
 loadBusinessCards();
