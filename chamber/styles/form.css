@@ -63,7 +63,10 @@ textarea:focus {
 #membershipForm button:hover {
   background: #1b3a27;
 }
-
+.modal p,
+address {
+  font-size: 1.5rem;
+}
 @media (max-width: 600px) {
   form {
     padding: 1.5rem;
@@ -88,7 +91,10 @@ textarea:focus {
   text-align: center;
   width: 250px;
 }
-
+.modal p,
+address {
+  font-size: 1.2rem;
+}
 .modal {
   display: none;
   position: fixed;
@@ -98,6 +104,7 @@ textarea:focus {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 200px;
 }
 
 .modal-content {

@@ -1,0 +1,84 @@
+{
+  "places": [
+    {
+      "name": "Zona Colonial",
+      "streetAddress": "Calle El Conde",
+      "cityStateZip": "Santo Domingo, DR",
+      "phoneNumber": "809-000-0000",
+      "websiteURL": "https://www.godominicanrepublic.com/",
+      "imageURL": "./images/zonac.webp",
+      "membershipLevel": "gold",
+      "adcopy": "The Colonial Zone is the historical heart of Santo Domingo, full of colonial architecture and vibrant culture."
+    },
+    {
+      "name": "El Limón Waterfall",
+      "streetAddress": "Carretera El Limón",
+      "cityStateZip": "Samaná, DR",
+      "phoneNumber": "809-000-1111",
+      "websiteURL": "https://www.godominicanrepublic.com/",
+      "imageURL": "./images/5f.webp",
+      "membershipLevel": "silver",
+      "adcopy": "A majestic waterfall in the heart of Samaná, ideal for adventurers and nature lovers."
+    },
+    {
+      "name": "Pico Duarte",
+      "streetAddress": "Cordillera Central",
+      "cityStateZip": "San Juan, DR",
+      "phoneNumber": "809-000-2222",
+      "websiteURL": "https://www.godominicanrepublic.com/",
+      "imageURL": "./images/pico-duarte.webp",
+      "membershipLevel": "bronze",
+      "adcopy": "The highest point in the Caribbean, perfect for experienced hikers seeking an epic adventure."
+    },
+    {
+      "name": "Bahía de las Águilas",
+      "streetAddress": "Jaragua National Park",
+      "cityStateZip": "Pedernales, DR",
+      "phoneNumber": "809-000-3333",
+      "websiteURL": "https://www.godominicanrepublic.com/",
+      "imageURL": "./images/bahia.webp",
+      "membershipLevel": "gold",
+      "adcopy": "One of the most pristine and beautiful beaches in the Caribbean, located in the southwest of the country."
+    },
+    {
+      "name": "27 Waterfalls of Damajagua",
+      "streetAddress": "Navarrete-Puerto Plata Highway",
+      "cityStateZip": "Puerto Plata, DR",
+      "phoneNumber": "809-000-4444",
+      "websiteURL": "https://www.27charcos.com/",
+      "imageURL": "./images/27charcos.webp",
+      "membershipLevel": "silver",
+      "adcopy": "An exciting route of waterfalls and natural slides, ideal for adrenaline lovers."
+    },
+    {
+      "name": "Cayo Levantado",
+      "streetAddress": "Samaná Bay",
+      "cityStateZip": "Samaná, DR",
+      "phoneNumber": "809-000-5555",
+      "websiteURL": "https://www.godominicanrepublic.com/",
+      "imageURL": "./images/cayo4.webp",
+      "membershipLevel": "bronze",
+      "adcopy": "A paradise island with white sands and crystal-clear waters, perfect for relaxation."
+    },
+    {
+      "name": "Altos de Chavón",
+      "streetAddress": "Casa de Campo Resort",
+      "cityStateZip": "La Romana, DR",
+      "phoneNumber": "809-000-6666",
+      "websiteURL": "https://www.casadecampo.com.do/",
+      "imageURL": "./images/altosdchavon.webp",
+      "membershipLevel": "gold",
+      "adcopy": "A Mediterranean-style artistic village overlooking the Chavón River with a vibrant cultural life."
+    },
+    {
+      "name": "Los Haitises National Park",
+      "streetAddress": "San Lorenzo Bay",
+      "cityStateZip": "Samaná, DR",
+      "phoneNumber": "809-000-7777",
+      "websiteURL": "https://www.godominicanrepublic.com/",
+      "imageURL": "./images/los-haitises.webp",
+      "membershipLevel": "silver",
+      "adcopy": "A unique ecosystem with mangroves, caves, and incredible biodiversity to explore by boat."
+    }
+  ]
+}

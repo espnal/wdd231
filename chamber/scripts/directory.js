@@ -23,9 +23,6 @@ listSelector.addEventListener("click", () => {
   }
 });
 
-// Load JSON data and do stuff
-// Business URL loaded in config.js
-
 const displayBusinesses = (members) => {
   const cards = document.querySelector(".directory-cards"); // select the output container element
 
@@ -43,8 +40,8 @@ const displayBusinesses = (members) => {
       card.classList.add("gold-member");
     }
     cards.appendChild(card);
-  }); // end of forEach loop
-}; // end of function expression
+  });
+};
 
 async function getBusinessData() {
   try {

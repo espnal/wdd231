@@ -15,7 +15,7 @@ const links = [
   { text: "Home", href: "./" },
   { text: "Directory", href: "./directory.html" },
   { text: "Join", href: "./join.html" },
-  { text: "Discover", href: "https://www.linkedin.com/in/roguin-pena/" },
+  { text: "Discover", href: "./discover.html" },
 ];
 const createNav = (links) => {
   const ul = document.createElement("ul");
@@ -86,3 +86,78 @@ function displayBusinessCards(businesses) {
 }
 
 loadBusinessCards();
+document.addEventListener("DOMContentLoaded", function () {
+  // Cargar datos desde el JSON
+  fetch("data/places.json")
+    .then((response) => response.json())
+    .then((data) => displayCards(data.places))
+    .catch((error) => console.error("Error loading data:", error));
+
+  function displayCards(items) {
+    const container = document.getElementById("grid-container");
+    const textContainer = document.getElementById("text-container"); // Fixed variable name
+    container.innerHTML = "";
+    textContainer.innerHTML = ""; // Clear previous modals
+
+    items.forEach((item) => {
+      let id = item.name.toLowerCase().replace(/\s+/g, "-"); // Convert name to a valid ID
+
+      const card = document.createElement("div");
+      card.classList.add("card2");
+
+      const modal = document.createElement("div");
+      modal.classList.add("modal");
+      modal.id = id;
+
+      const moreInf = document.createElement("div");
+      moreInf.classList.add("modal-content");
+
+      card.innerHTML = `
+            <h2>${item.name}</h2>
+            <figure>
+                <img loading="lazy" src="${item.imageURL}" alt="${item.name}" >
+            </figure>
+            <button onclick="openModal('${id}')">Learn More</button>`;
+
+      moreInf.innerHTML = `
+            <span class="close" onclick="closeModal('${id}')">&times;</span>
+            <address>${item.streetAddress}</address>
+            <p>${item.adcopy}</p>`;
+
+      modal.appendChild(moreInf);
+      container.appendChild(card);
+      textContainer.appendChild(modal);
+    });
+  }
+
+  // LocalStorage para el mensaje de visitante
+  const visitorMessage = document.getElementById("visitor-message");
+  const lastVisit = localStorage.getItem("lastVisit");
+  const now = Date.now();
+
+  if (!lastVisit) {
+    visitorMessage.textContent =
+      "Welcome! Let us know if you have any questions.";
+  } else {
+    const lastVisitDate = new Date(parseInt(lastVisit));
+    const diffTime = now - lastVisitDate;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays < 1) {
+      visitorMessage.textContent = "Back so soon! Awesome!";
+    } else {
+      visitorMessage.textContent = `You last visited ${diffDays} ${
+        diffDays === 1 ? "day" : "days"
+      } ago.`;
+    }
+  }
+
+  localStorage.setItem("lastVisit", now);
+});
+function openModal(id) {
+  document.getElementById(id).style.display = "block";
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = "none";
+}
