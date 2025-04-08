@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function displayCards(items) {
     const container = document.getElementById("grid-container");
+    if (!container) return;
     const textContainer = document.getElementById("text-container"); // Fixed variable name
     container.innerHTML = "";
     textContainer.innerHTML = ""; // Clear previous modals
@@ -134,22 +135,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const visitorMessage = document.getElementById("visitor-message");
   const lastVisit = localStorage.getItem("lastVisit");
   const now = Date.now();
-
-  if (!lastVisit) {
-    visitorMessage.textContent =
-      "Welcome! Let us know if you have any questions.";
-  } else {
-    const lastVisitDate = new Date(parseInt(lastVisit));
-    const diffTime = now - lastVisitDate;
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-    if (diffDays < 1) {
-      visitorMessage.textContent = "Back so soon! Awesome!";
+  if (visitorMessage) {
+    if (!lastVisit) {
+      visitorMessage.textContent =
+        "Welcome! Let us know if you have any questions.";
     } else {
-      visitorMessage.textContent = `You last visited ${diffDays} ${
-        diffDays === 1 ? "day" : "days"
-      } ago.`;
+      const lastVisitDate = new Date(parseInt(lastVisit));
+      const diffTime = now - lastVisitDate;
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+      if (diffDays < 1) {
+        visitorMessage.textContent = "Back so soon! Awesome!";
+      } else {
+        visitorMessage.textContent = `You last visited ${diffDays} ${
+          diffDays === 1 ? "day" : "days"
+        } ago.`;
+      }
     }
+  } else {
+    return;
   }
 
   localStorage.setItem("lastVisit", now);
