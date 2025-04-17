@@ -1,4 +1,3 @@
-import { createNav } from "./nav.js";
 document.addEventListener("DOMContentLoaded", function () {
   // Footer info
   const lastModifiedElement = document.getElementById("lastModified");
@@ -17,6 +16,16 @@ document.addEventListener("DOMContentLoaded", function () {
     { text: "Destination", href: "./destination.html" },
     { text: "Book now", href: "./booknow.html" },
   ];
+
+  const createNav = (links) => {
+    const ul = document.createElement("ul");
+    links.forEach((link) => {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${link.href}">${link.text}</a>`;
+      ul.appendChild(li);
+    });
+    return ul;
+  };
 
   const nav1 = document.querySelector(".nav-link");
   const nav2 = document.querySelector(".nav-link2");
