@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You | Travelto</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <link rel="icon" href="images/c.png" type="image/x-icon" />
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-cont">
+        <div class="sub-header">
+          <div class="smallviewnav">
+            <img class="logo" src="images/trav.png" alt="Travelto Logo" />
+          </div>
+          <nav class="nav-link"></nav>
+          <div class="hamburger">&#9776;</div>
+        </div>
+        <nav class="nav-link2"></nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="thankyou-content"></div>
+    </main>
+
+    <footer>
+      <p id="copyr"></p>
+      <p id="lastModified"></p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const name = localStorage.getItem("travelto_name") || "Traveler";
+        const destination =
+          localStorage.getItem("travelto_destination") || "your destination";
+
+        const main = document.querySelector(".thankyou-content");
+        if (!main) return;
+
+        main.innerHTML = `
+            <h1>Thank You, ${name}!</h1>
+            <p>Your reservation to <strong>${destination}</strong> has been received.</p>
+            <p>We'll be in touch soon with all the details you need for your trip.</p>
+            <a href="index.html" class="home-btn">Back to Home</a>
+          `;
+      });
+    </script>
+  </body>
+</html>

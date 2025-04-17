@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Now | Travelto</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+    <link rel="stylesheet" href="styles/booknow.css" />
+
+    <link rel="icon" href="images/c.png" type="image/x-icon" />
+    <script src="scripts/script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-cont">
+        <div class="sub-header">
+          <div class="smallviewnav">
+            <img class="logo" src="images/trav-.png" alt="Travelto Logo" />
+          </div>
+          <nav class="nav-link"></nav>
+          <div class="hamburger">&#9776;</div>
+        </div>
+        <nav class="nav-link2"></nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="booking-section">
+        <h1>Book Your Adventure</h1>
+        <p>Fill out the form below to reserve your dream destination.</p>
+
+        <form class="booking-form" action="thankyou.html" method="get">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="destination">Destination:</label>
+          <select id="destination" name="destination" required>
+            <option value="">-- Select a Destination --</option>
+            <option value="santorini">Santorini</option>
+            <option value="paris">Paris</option>
+            <option value="newyork">New York</option>
+            <option value="bali">Bali</option>
+            <option value="banff">Banff</option>
+          </select>
+
+          <label for="date">Travel Date:</label>
+          <input type="date" id="date" name="date" required />
+
+          <label for="message">Additional Notes (optional):</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <button type="submit">Book Now</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p id="copyr"></p>
+      <p id="lastModified"></p>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector(".booking-form");
+        if (!form) return;
+
+        form.addEventListener("submit", (e) => {
+          const fullName = document.getElementById("fullName").value;
+          const destination = document.getElementById("destination").value;
+
+          localStorage.setItem("travelto_name", fullName);
+          localStorage.setItem("travelto_destination", destination);
+        });
+      });
+    </script>
+  </body>
+</html>

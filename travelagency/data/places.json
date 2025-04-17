@@ -1,0 +1,112 @@
+{
+  "places": [
+    {
+      "name": "Santorini",
+      "country": "Greece",
+      "description": "A volcanic island famous for its white houses with blue domes and stunning sunsets.",
+      "highlight_activity": "Catamaran cruise around the caldera",
+      "image": "./images/santorini.webp",
+      "prices": {
+        "flight": 850,
+        "hotel": 1200,
+        "tour": 300
+      }
+    },
+    {
+      "name": "Kyoto",
+      "country": "Japan",
+      "description": "A historic city filled with ancient temples, zen gardens, and geishas.",
+      "highlight_activity": "Visit the Arashiyama Bamboo Grove",
+      "image": "./images/japon.webp",
+      "prices": {
+        "flight": 950,
+        "hotel": 900,
+        "tour": 250
+      }
+    },
+    {
+      "name": "New York",
+      "country": "United States",
+      "description": "The city that never sleeps, full of skyscrapers, culture, and nightlife.",
+      "highlight_activity": "Go to the top of the Empire State Building",
+      "image": "./images/newyork.webp",
+      "prices": {
+        "flight": 400,
+        "hotel": 1500,
+        "tour": 200
+      }
+    },
+    {
+      "name": "Paris",
+      "country": "France",
+      "description": "The city of love, known for art, fashion, and the Eiffel Tower.",
+      "highlight_activity": "Evening cruise on the Seine River",
+      "image": "./images/paris.webp",
+      "prices": {
+        "flight": 700,
+        "hotel": 1300,
+        "tour": 180
+      }
+    },
+    {
+      "name": "Rome",
+      "country": "Italy",
+      "description": "The Eternal City full of history, art, and impressive architecture.",
+      "highlight_activity": "Tour of the Colosseum and Roman Forum",
+      "image": "./images/roma.webp",
+      "prices": {
+        "flight": 650,
+        "hotel": 1100,
+        "tour": 220
+      }
+    },
+    {
+      "name": "Banff",
+      "country": "Canada",
+      "description": "A national park with turquoise lakes and snowy mountains.",
+      "highlight_activity": "Canoeing on Lake Louise",
+      "image": "./images/banff.webp",
+      "prices": {
+        "flight": 500,
+        "hotel": 1000,
+        "tour": 150
+      }
+    },
+    {
+      "name": "Bali",
+      "country": "Indonesia",
+      "description": "A tropical island known for its beaches, rice fields, and spiritual culture.",
+      "highlight_activity": "Yoga sessions in Ubud",
+      "image": "./images/bali.webp",
+      "prices": {
+        "flight": 1200,
+        "hotel": 800,
+        "tour": 180
+      }
+    },
+    {
+      "name": "Machu Picchu",
+      "country": "Peru",
+      "description": "An ancient Incan city in the Andes, surrounded by mystery and natural beauty.",
+      "highlight_activity": "Hike the Inca Trail",
+      "image": "./images/peru.webp",
+      "prices": {
+        "flight": 650,
+        "hotel": 700,
+        "tour": 300
+      }
+    },
+    {
+      "name": "Croatia",
+      "country": "Croatia",
+      "description": "Stunning Adriatic coastline and charming medieval cities.",
+      "highlight_activity": "Walk the Dubrovnik City Walls",
+      "image": "./images/croacia.webp",
+      "prices": {
+        "flight": 750,
+        "hotel": 950,
+        "tour": 200
+      }
+    }
+  ]
+}

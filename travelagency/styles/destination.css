@@ -1,0 +1,119 @@
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.card2 {
+  background: var(--color-white);
+  color: var(--color-black);
+  border-radius: 1rem;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 340px;
+}
+
+.card2:hover {
+  transform: translateY(-5px);
+}
+
+.card2 img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card2 h2,
+h3 {
+  font-size: 1.4rem;
+  margin: 1rem 1rem 0.5rem;
+  color: var(--color-dark);
+}
+
+.card2 p {
+  font-size: 0.95rem;
+  margin: 0.25rem 1rem 1rem;
+  color: #555;
+}
+
+.card2 button {
+  width: calc(100% - 2rem);
+  margin: 1rem;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card2 button:hover {
+  background-color: var(--color-accent);
+}
+hr {
+  border: none;
+  border-top: 6px solid var(--color-accent);
+  /* margin: 2rem 0; */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: var(--color-white);
+  margin: 10% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: var(--color-dark);
+}
+.modal-cont-sm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-content h3 {
+  margin-bottom: 1rem;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-content li {
+  margin: 0.5rem 0;
+}
+
+.modal .close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-accent);
+}
+
+@media (min-width: 1025px) {
+  #grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
