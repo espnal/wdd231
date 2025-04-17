@@ -13,7 +13,6 @@
   font-family: "Afacad Flux", serif;
   font-weight: 500;
   font-style: normal;
-  /* background-color: #123524; */
 }
 body {
   max-width: 1080px;
@@ -32,7 +31,6 @@ h1 {
 .logo {
   text-align: center;
   align-items: center;
-  /* margin-right: 2rem; */
 }
 nav ul {
   display: none;
@@ -103,13 +101,13 @@ main {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 .hero {
-  background-image: url("../images/chill.jpg"); /* reemplázalo con una imagen si quieres */
+  background-image: url("../images/chill.jpg");
   background-size: cover;
   background-position: center;
   color: #ffffff;
   text-align: center;
   padding: 6rem 2rem;
-  background-color: #015551; /* fallback color */
+  background-color: #015551;
 }
 
 .hero h1 {
@@ -117,16 +115,6 @@ main {
   margin-bottom: 1rem;
   opacity: 0.8;
 }
-
-/* .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  background-color: #000000;
-  color: #fe4f2d;
-  padding: 1rem;
-  border-radius: 5px;
-  opacity: 0.6;
-} */
 
 .btn-primary {
   background-color: #be3d2a;
