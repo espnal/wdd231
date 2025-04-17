@@ -32,6 +32,7 @@ h1 {
 .logo {
   text-align: center;
   align-items: center;
+  /* margin-right: 2rem; */
 }
 nav ul {
   display: none;
@@ -51,7 +52,7 @@ nav ul li a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
-  font-size: small;
+  font-size: large;
   padding: 0.5rem;
   list-style: none;
 }
@@ -81,7 +82,7 @@ nav ul li a:hover {
 }
 .header-cont img {
   width: 200px;
-  margin: 1rem 0;
+  margin: 1rem 3rem 1rem 0rem;
 }
 .hamburger {
   margin: 0.5rem;
@@ -162,6 +163,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  justify-items: center;
 }
 
 .destination-card {
